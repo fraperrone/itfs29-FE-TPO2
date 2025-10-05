@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Footer from './components/footer/footer.jsx'
+import Guillermo from './components/guillermo.jsx'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <h1>Hola mundo</h1>
+      <Guillermo></Guillermo>
       <Footer></Footer>
     </>
   )
