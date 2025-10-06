@@ -23,11 +23,13 @@ const CyberpunkInfo = () => {
         <div key={i} className="particle" />
       ))}
       {data ? (
-        <div className='info'>
-          <p><strong>Título:</strong> {data.Title}</p>
-          <p><strong>Año:</strong> {data.Year}</p>
-          <p><strong>Descripción:</strong> {data.Plot}</p>
-          <img src={data.Poster} alt="Cyberpunk Poster" />
+        <div className='profile'>
+          <ul>
+            <li><strong>Título:</strong> {data.Title}</li>
+            <li><strong>Año:</strong> {data.Year}</li>
+            <li><strong>Descripción:</strong> {data.Plot}</li>
+          </ul>
+          <img src={data.Poster} alt="Cyberpunk Poster"/>
         </div>
       ) : (
         <p>Cargando información...</p>
