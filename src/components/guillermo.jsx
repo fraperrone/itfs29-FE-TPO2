@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
 import { useProfileAnimation } from '../hooks/useProfileAnimation.js'
 import '../styles/main.css'
-import avatarImg from '../assets/avatar_guillermo'
+import avatarImg from '../assets/avatar_guillermo.png'
 
 const Guillermo = () => {
   const habilidades = ['JavaScript', 'React', 'Node.js']
-  const peliculasFavoritas = ['Inception', 'The Matrix', 'Interstellar']
+  const peliculasFavoritas = ['Volver al futuro', 'The Elizabeth Thown', 'Los Sospechosos de siempre']
   const profileRef = useRef(null)
 
   useProfileAnimation(profileRef)
@@ -40,7 +40,7 @@ const Guillermo = () => {
             <h1 className="title">Guillermo Kopacek</h1>
             <ul className="info">
               <li>
-                <strong>Edad:</strong> 34
+                <strong>Edad:</strong> 39
               </li>
               <li>
                 <strong>Habilidades:</strong>
