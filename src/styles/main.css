@@ -160,6 +160,7 @@ li {
   overflow-x: hidden;
   border-radius: 2px;
   box-shadow: 0 0 20px rgba(115, 7, 16, 0.2);
+  margin: 50px;
 }
 
 .profile.pre-enter {

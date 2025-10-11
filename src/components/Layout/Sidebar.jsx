@@ -22,9 +22,9 @@ const Sidebar = () => {
           <li className={location.pathname === '/bitacora' ? 'active' : ''}>
             <Link to="/bitacora">Bitácora</Link>
           </li>
-          <li className={location.pathname.includes('/perfil') ? 'active' : ''}>
+          {/* <li className={location.pathname.includes('/perfil') ? 'active' : ''}>
             <Link to="/perfil/franco">👥 Integrantes</Link>
-          </li>
+          </li> */}
           <li className={location.pathname === '/json-data' ? 'active' : ''}>
             <Link to="/json-data">Datos JSON</Link>
           </li>
