@@ -1,16 +1,27 @@
 // components/Profile/ProfileCard.jsx
-import React, { useRef } from 'react';
-import { useProfileAnimation } from '../../hooks/useProfileAnimation';
-import ParticleBackground from '../UI/ParticleBackground';
+import React, { useRef } from 'react'
+import { useProfileAnimation } from '../../hooks/useProfileAnimation'
+import ParticleBackground from '../UI/ParticleBackground'
+import { useNavigate } from 'react-router-dom'
 
 const ProfileCard = ({ integrante }) => {
-  const profileRef = useRef(null);
-  useProfileAnimation(profileRef);
+  const profileRef = useRef(null)
+  useProfileAnimation(profileRef)
+
+  const navigate = useNavigate()
 
   return (
     <div className="body">
+      {/* Boton volver */}
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Volver
+        </button>
+      </div>
+      {/* Efecto particulas */}
       <ParticleBackground />
-      
+
+      {/* contenedor tarjeta */}
       <div className="profile" ref={profileRef}>
         <div
           className="avatar"
@@ -19,7 +30,7 @@ const ProfileCard = ({ integrante }) => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             width: '100%',
-            height: '300px',
+            height: 'auto',
           }}
         />
         <div className="name">
@@ -58,7 +69,7 @@ const ProfileCard = ({ integrante }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProfileCard;
+export default ProfileCard
