@@ -51,7 +51,7 @@ const footerContainerRef = useRef(null);
         <div className={styles.footerSection}>
           <h4>IFTS 29</h4>
           <p>Desarrollo Front-End</p>
-          <p>Profesor: [Nombre del Profesor]</p>
+          <p>Profesor: Luciano Ariel Martinez</p>
         </div>
 
         {/* Columna 3: Enlaces Relevantes */}
