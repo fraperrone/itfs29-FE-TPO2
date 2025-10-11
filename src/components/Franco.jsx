@@ -8,8 +8,6 @@ const Franco = () => {
 
   useProfileAnimation(profileRef)
 
-  // Bloque de prueba para el avatar
-
   // generamos un const con los datos de franco
   const integrante = {
     nombre: 'Franco Perrone',
