@@ -16,6 +16,32 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// function App() {
+//   return (
+//     <Router>
+//       <div className="app">
+//         <Sidebar />
+//         <main className="main-content">
+//           <Routes>
+//             <Route path="/" element={<HomePage />} />
+//             <Route path="/bitacora" element={<BitacoraPage />} />
+//             <Route path="/perfil/:id" element={<ProfilePage />} />
+//             <Route path="/json-data" element={<JsonDataPage />} />
+//             <Route path="/api-data" element={<ApiDataPage />} />
+//           </Routes>
+//         </main>
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+import CarlosPage from './pages/CarlosPage';
+import FrancoPage from './pages/FrancoPage';
+import GuillePage from './pages/GuillePage';
+// import PaulaPage from './pages/PaulaPage';
+
 function App() {
   return (
     <Router>
@@ -25,7 +51,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/bitacora" element={<BitacoraPage />} />
-            <Route path="/perfil/:id" element={<ProfilePage />} />
+            <Route path="/perfil/carlos" element={<CarlosPage />} />
+            <Route path="/perfil/franco" element={<FrancoPage />} />
+            <Route path="/perfil/guillermo" element={<GuillePage />} />
+            {/* <Route path="/perfil/paula" element={<PaulaPage />} /> */}
             <Route path="/json-data" element={<JsonDataPage />} />
             <Route path="/api-data" element={<ApiDataPage />} />
           </Routes>
@@ -34,5 +63,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
