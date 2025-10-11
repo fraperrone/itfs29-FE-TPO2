@@ -1,4 +1,4 @@
-/* @import url("s://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"); */
+@import url("s://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 .body {
   top: 50%;
   left: 50%;
@@ -160,7 +160,8 @@ li {
   overflow-x: hidden;
   border-radius: 2px;
   box-shadow: 0 0 20px rgba(115, 7, 16, 0.2);
-  margin: 50px;
+
+  padding: 40px;
 }
 
 .profile.pre-enter {
@@ -643,4 +644,40 @@ ul{
 .bitacora-page .info li {
   list-style: disc;
   margin-bottom: 8px;
+}
+
+/* ========== BOTÓN DE VOLVER ========== */
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 270px;
+  z-index: 999;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(66, 30, 132, 0.9);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover {
+  background: rgba(66, 30, 132, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 30, 132, 0.6);
+}
+
+.back-button svg {
+  width: 18px;
+  height: 18px;
 }

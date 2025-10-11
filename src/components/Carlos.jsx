@@ -3,8 +3,10 @@ import React, { useRef } from 'react'
 import { useProfileAnimation } from '../hooks/useProfileAnimation.js'
 import '../styles/main.css'
 import avatarImg from '../assets/avatar_carlos.png'
+import { useNavigate } from 'react-router-dom';
 
 const Carlos = () => {
+  const navigate = useNavigate();
   const habilidades = ['Java', 'JavaScript', 'Node.js']
   const peliculasFavoritas = ['Blade Runner', 'Interstellar', 'Matrix']
   const musicaFavorita = [
@@ -18,6 +20,11 @@ const Carlos = () => {
 
   return (
     <div>
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Volver
+        </button>
+      </div>
       <div className="body">
         {[...Array(9)].map((_, i) => (
           <div key={i} className="particle" />

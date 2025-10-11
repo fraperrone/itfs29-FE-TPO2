@@ -1,9 +1,17 @@
 // src/pages/BitacoraPage.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const BitacoraPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="bitacora-page">
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Volver
+        </button>
+      </div>
+      
       <div className="body">
         <div className="profile">
           <div className="name">
@@ -54,3 +62,4 @@ const BitacoraPage = () => {
 };
 
 export default BitacoraPage;
+

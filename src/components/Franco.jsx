@@ -2,8 +2,10 @@ import React, { useRef } from 'react'
 import { useProfileAnimation } from '../hooks/useProfileAnimation.js'
 import '../styles/main.css'
 import avatarImg from '../assets/avatar_franco.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const Franco = () => {
+  const navigate = useNavigate();
   const habilidades = ['JavaScript', 'React', 'Node.js']
   const peliculasFavoritas = ['Inception', 'The Matrix', 'Interstellar']
   const profileRef = useRef(null)
@@ -14,6 +16,11 @@ const Franco = () => {
 
   return (
     <div>
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Volver
+        </button>
+      </div>
       {/* <div style={{backgroundImage:`url(${avatarImg})`}} className="avatar">
                 <h2>Bloque con fondo</h2>
                 <p>Este es un bloque de prueba con imagen de fondo.</p>
