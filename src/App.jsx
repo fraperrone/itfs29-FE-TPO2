@@ -1,6 +1,7 @@
 // src/App.jsx
 import { BrowserRouter as Router } from 'react-router-dom';
 import Sidebar from './components/Layout/Sidebar';
+import Footer from './components/Footer/footer'
 import AppRoutes from './components/Routes/AppRoutes';
 import './styles/main.css';
 import './styles/responsive.css';
@@ -15,6 +16,7 @@ function App() {
         <Sidebar />
         <main className="main-content">
           <AppRoutes />
+          <Footer />
         </main>
       </div>
     </Router>
