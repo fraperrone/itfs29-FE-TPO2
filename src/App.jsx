@@ -7,6 +7,7 @@ import './styles/responsive.css';
 /*import Footer from './components/footer/footer.jsx'*/
 import './App.css'
 
+
 function App() {
   return (
     <Router>
