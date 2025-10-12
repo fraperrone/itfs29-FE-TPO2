@@ -64,23 +64,6 @@
 }
 
 @media (max-width: 543px) {
-    .footerLinks{
-        display: none;
-    }
-    
-    
-    p{
-        display: none;
-    }
-    
-    .footerContainer{
-        margin: 0;
-    }
-
-    
-}
-
-@media (max-height:788px) {
     .footerContainer{
         display: none;
     }
