@@ -1,11 +1,14 @@
 // src/pages/HomePage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ParticleBackground from '../components/UI/ParticleBackground'
 
 const HomePage = () => {
   return (
     <div className="home-page">
       <div className="body">
+        {/* Efecto particulas */}
+      <ParticleBackground />
         <div className="profile">
           <div className="name">
             <h1 className="title">Equipo de Desarrollo Web - GRUPO 8</h1>

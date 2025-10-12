@@ -2,6 +2,7 @@
 import React from 'react';
 import JsonData from '../Data/JsonData';
 import { useNavigate } from 'react-router-dom';
+import ParticleBackground from '../components/UI/ParticleBackground'
 
 const JsonDataPage = () => {
   const navigate = useNavigate();
@@ -13,6 +14,8 @@ const JsonDataPage = () => {
         </button>
       </div>
       <div className="body">
+        {/* Efecto particulas */}
+        <ParticleBackground />
         <div className="profile">
           <div className="name">
             <h1 className="title">Datos desde Archivo JSON</h1>

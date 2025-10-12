@@ -1,12 +1,8 @@
 import React, { useRef } from 'react'
-import { useProfileAnimation } from '../hooks/useProfileAnimation.js'
 import '../styles/main.css'
 import ProfileCard from './Profile/ProfileCard.jsx'
 
 const Franco = () => {
-  const profileRef = useRef(null)
-
-  useProfileAnimation(profileRef)
 
   // Bloque de prueba para el avatar
 
