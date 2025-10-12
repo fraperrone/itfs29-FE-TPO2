@@ -1,21 +1,23 @@
-import { useState } from 'react'
-import Footer from '../src/components/Footer/footer.jsx'
-import Guillermo from './components/guillermo.jsx'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// src/App.jsx
+import { BrowserRouter as Router } from 'react-router-dom';
+import Sidebar from './components/Layout/Sidebar';
+import AppRoutes from './components/Routes/AppRoutes';
+import './styles/main.css';
+import './styles/responsive.css';
+/*import Footer from './components/footer/footer.jsx'*/
 import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Guillermo></Guillermo>
-      <Footer></Footer>
-      
-    </>
-  )
+    <Router>
+      <div className="app">
+        <Sidebar />
+        <main className="main-content">
+          <AppRoutes />
+        </main>
+      </div>
+    </Router>
+  );
 }
-
-export default App
+export default App;
