@@ -1,23 +1,18 @@
-// src/App.jsx
-import { BrowserRouter as Router } from 'react-router-dom';
-import Sidebar from './components/Layout/Sidebar';
-import Footer from './components/Footer/footer'
-import AppRoutes from './components/Routes/AppRoutes';
-import './styles/main.css';
-import './styles/responsive.css';
-/*import Footer from './components/footer/footer.jsx'*/
-import './App.css'
-
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "./components/Layout/Sidebar";
+import AppRoutes from "./components/Routes/AppRoutes";
+import "./styles/main.css";
+import "./styles/responsive.css";
+import "./App.css";
+import ParticleBackground from "./components/UI/ParticleBackground";
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="app background-style">
+        <ParticleBackground />
         <Sidebar />
-        <main className="main-content">
-          <AppRoutes />
-          <Footer />
-        </main>
+        <AppRoutes />
       </div>
     </Router>
   );
