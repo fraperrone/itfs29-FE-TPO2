@@ -1,6 +1,8 @@
 // src/pages/BitacoraPage.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import ParticleBackground from '../components/UI/ParticleBackground'
+
 
 const BitacoraPage = () => {
   const navigate = useNavigate();
@@ -13,6 +15,8 @@ const BitacoraPage = () => {
       </div>
       
       <div className="body">
+        {/* Efecto particulas */}
+        <ParticleBackground />
         <div className="profile">
           <div className="name">
             <h1 className="title">Bitácora del Proyecto</h1>

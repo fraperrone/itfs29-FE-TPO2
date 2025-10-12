@@ -1,80 +1,24 @@
-// Carlos.jsx - Versión corregida
 import React, { useRef } from 'react'
-import { useProfileAnimation } from '../hooks/useProfileAnimation.js'
 import '../styles/main.css'
-import avatarImg from '../assets/avatar_carlos.png'
-import { useNavigate } from 'react-router-dom';
+import ProfileCard from './Profile/ProfileCard.jsx'
 
 const Carlos = () => {
-  const navigate = useNavigate();
-  const habilidades = ['Java', 'JavaScript', 'Node.js']
-  const peliculasFavoritas = ['Blade Runner', 'Interstellar', 'Matrix']
-  const musicaFavorita = [
+  const integrante = {
+    nombre: 'Carlos Sebastian Gauto',
+    edad: 34,
+    habilidades: ['Java', 'JavaScript', 'Node.js'],
+    peliculasFavoritas: ['Blade Runner', 'Interstellar', 'Matrix'],
+    avatar: 'avatar_carlos.png',
+    musicaFavorita: [
     '(I Just) Died In Your Arms Tonight', 
     'Walk of Life', 
     'Africa'
-  ]
-  
-  const profileRef = useRef(null)
-  useProfileAnimation(profileRef)
+    ],
+  }
 
   return (
     <div>
-      <div className="back-button-container">
-        <button className="back-button" onClick={() => navigate(-1)}>
-          ← Volver
-        </button>
-      </div>
-      <div className="body">
-        {[...Array(9)].map((_, i) => (
-          <div key={i} className="particle" />
-        ))}
-
-        <div className="profile" ref={profileRef}>
-          <div
-            className="avatar"
-            style={{
-              backgroundImage: `url(${avatarImg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              width: '100%',
-              height: '300px',
-            }}
-          />
-          <div className="name">
-            <h1 className="title">Carlos Gauto</h1>
-            <ul className="info">
-              <li>
-                <strong>Edad:</strong> 33
-              </li>
-              <li>
-                <strong>Habilidades:</strong>
-                <ul>
-                  {habilidades.map((habilidad, idx) => (
-                    <li key={idx}>{habilidad}</li>
-                  ))}
-                </ul>
-              </li>
-              <li>
-                <strong>Películas Favoritas:</strong>
-                <ul>
-                  {peliculasFavoritas.map((pelicula, idx) => (
-                    <li key={idx}>{pelicula}</li>
-                  ))}
-                </ul>
-              </li>
-              {/* <li>
-                <strong>Música Favorita:</strong>
-                <ul>
-                  {musicaFavorita.map((musica, idx) => (
-                    <li key={idx}>{musica}</li>
-                  ))}
-                </ul>
-              </li> */}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <ProfileCard integrante={integrante} />
     </div>
   )
 }
