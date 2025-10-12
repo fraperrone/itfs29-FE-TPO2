@@ -44,14 +44,14 @@ const footerContainerRef = useRef(null);
         {/* Columna 1: Información del Proyecto */}
         <div className={styles.footerSection}>
           <h4>TP 2 Con React</h4>
-          <p>&copy; {currentYear} Grupo 9</p>
+          <p>&copy; {currentYear} Grupo 8</p>
         </div>
 
         {/* Columna 2: Información Académica */}
         <div className={styles.footerSection}>
           <h4>IFTS 29</h4>
-          <p>Desarrollo Front-End</p>
-          <p>Profesor: Luciano Ariel Martinez</p>
+          <p className='materia'>Desarrollo Front-End</p>
+          <p className='nombreProfesor'>Profesor: Luciano Ariel Martinez</p>
         </div>
 
         {/* Columna 3: Enlaces Relevantes */}
