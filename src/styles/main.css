@@ -530,6 +530,9 @@ ul {
 
 /* Mobile layout adjustments */
 @media (max-width: 768px) {
+  .particle {
+    display: none;
+  }
   .app {
     padding-left: 0;
     flex-direction: column;
