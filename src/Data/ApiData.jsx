@@ -11,7 +11,6 @@ const ApiData = () => {
     const fetchData = async () => {
       try {
         setCargando(true);
-        // API de Pokémon como ejemplo
         const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20');
         if (!response.ok) {
           throw new Error('Error al cargar los datos');

@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/main.css";
-import ProfileCard from "./Profile/ProfileCard.jsx";
+import "../../styles/main.css";
+import ProfileCard from "./ProfileCard.jsx";
 
 const Paula = () => {
   const integrante = {
