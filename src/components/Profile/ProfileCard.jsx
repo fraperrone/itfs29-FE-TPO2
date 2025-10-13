@@ -11,7 +11,7 @@ const ProfileCard = ({ integrante }) => {
       <div
         className="avatar"
         style={{
-          backgroundImage: `url(../src/assets/${integrante.avatar})`,
+          backgroundImage: `url(${integrante.avatar})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
