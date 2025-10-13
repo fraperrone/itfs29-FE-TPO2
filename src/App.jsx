@@ -3,7 +3,7 @@ import Sidebar from "./components/Layout/Sidebar";
 import AppRoutes from "./components/Routes/AppRoutes";
 import "./styles/main.css";
 import "./styles/responsive.css";
-import "./App.css";
+import "./styles/App.css";
 import ParticleBackground from "./components/UI/ParticleBackground";
 
 function App() {
