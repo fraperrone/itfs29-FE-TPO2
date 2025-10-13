@@ -1,6 +1,7 @@
 // src/components/Data/ApiData.jsx
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
+import axios from 'axios';
 
 const ApiData = () => {
   const [datos, setDatos] = useState([]);
@@ -11,12 +12,8 @@ const ApiData = () => {
     const fetchData = async () => {
       try {
         setCargando(true);
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20');
-        if (!response.ok) {
-          throw new Error('Error al cargar los datos');
-        }
-        const data = await response.json();
-        setDatos(data.results);
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20');
+        setDatos(response.data.results);
         setError(null);
       } catch (err) {
         setError(err.message);
