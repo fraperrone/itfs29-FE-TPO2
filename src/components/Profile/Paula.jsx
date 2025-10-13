@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/main.css";
 import ProfileCard from "./ProfileCard.jsx";
+import avatarImg from "../../assets/paula_image.jpg";
 
 const Paula = () => {
   const integrante = {
@@ -8,7 +9,7 @@ const Paula = () => {
     edad: 25,
     habilidades: ["HTML", "CSS", "JavaScript", "Webflow"],
     peliculasFavoritas: ["Brake", "Click", "El Descenso"],
-    avatar: "paula_image.jpg",
+    avatar: avatarImg,
     // agregamos musicaFavorita
     musicaFavorita: [
       "Linkin Park - Meteora",
