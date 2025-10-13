@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../Footer/footer";
-import "./Layout.css";
+import Footer from "../footer/footer";
+import "./layout.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const Layout = ({ children }) => {
