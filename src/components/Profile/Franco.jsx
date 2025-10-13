@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/main.css";
 import ProfileCard from "./ProfileCard.jsx";
+import avatarImg from "../../assets/avatar_franco.jpg";
 
 const Franco = () => {
   const integrante = {
@@ -8,7 +9,7 @@ const Franco = () => {
     edad: 34,
     habilidades: ["JavaScript", "React", "Node.js"],
     peliculasFavoritas: ["Inception", "The Matrix", "Interstellar"],
-    avatar: "avatar_franco.jpg",
+    avatar: avatarImg,
     // agregamos musicaFavorita
     musicaFavorita: [
       "Queen - Bohemian Rhapsody",
