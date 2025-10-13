@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Footer.module.css"; // Los estilos no cambian
+import styles from "./footer.module.css"; // Los estilos no cambian
 import { useSpotlight } from "../../hooks/useSpotlight";
 import { useRef } from "react";
 
