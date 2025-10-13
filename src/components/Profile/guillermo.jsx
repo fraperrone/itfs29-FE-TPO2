@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { useProfileAnimation } from "../hooks/useProfileAnimation.js";
-import "../styles/main.css";
-import avatarImg from "../assets/avatar_guillermo.png";
+import { useProfileAnimation } from "../../hooks/useProfileAnimation.js";
+import "../../styles/main.css";
+import avatarImg from "../../assets/avatar_guillermo.png";
 
 const Guillermo = () => {
   const habilidades = ["JavaScript", "React", "Node.js"];

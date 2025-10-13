@@ -1,5 +1,5 @@
 import React from "react";
-import Paula from "../components/Paula";
+import Paula from "../components/Profile/Paula";
 
 const PaulaPage = () => {
   return <Paula />;

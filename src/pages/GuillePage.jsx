@@ -1,5 +1,5 @@
 import React from 'react'
-import Guillermo from '../components/guillermo'
+import Guillermo from '../components/Profile/guillermo'
 
 const GuillePage = () => {
   return <Guillermo />

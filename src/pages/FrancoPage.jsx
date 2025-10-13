@@ -1,5 +1,5 @@
 import React from "react";
-import Franco from "../components/Franco";
+import Franco from "../components/Profile/Franco";
 
 const FrancoPage = () => {
   return <Franco />;
