@@ -1,12 +1,8 @@
-import React from 'react';
-import Franco from '../components/Franco';
+import React from "react";
+import Franco from "../components/Profile/Franco";
 
 const FrancoPage = () => {
-    return (
-        <main>
-            <Franco />
-        </main>
-    );
+  return <Franco />;
 };
 
 export default FrancoPage;

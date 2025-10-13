@@ -1,5 +1,5 @@
 import React from 'react'
-import Carlos from '../components/Carlos'
+import Carlos from '../components/Profile/Carlos'
 
 // Página mínima que solo renderiza el componente
 const CarlosPage = () => {

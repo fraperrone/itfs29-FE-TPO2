@@ -1,39 +1,107 @@
 // components/Layout/Sidebar.jsx
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Sidebar.css';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Sidebar.css";
 // import logo from '../../assets/logo.png';
 
 const Sidebar = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <div className="sidebar">
-      <div className="sidebar-logo">
-        {/* <img src={logo} alt="Logo Grupo 8" /> */}
-        <h2>GRUPO 8</h2>
+    <>
+      {/* Background Blur Overlay */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={closeMobileMenu} />
+      )}
+
+      {/* Mobile Navbar */}
+      <div className="mobile-navbar">
+        <div className="mobile-nav-header">
+          <h2 className="mobile-logo">GRUPO 8</h2>
+          <button
+            className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        <nav className={`mobile-nav ${isMobileMenuOpen ? "active" : ""}`}>
+          <ul className="mobile-nav-list">
+            <li className={location.pathname === "/" ? "active" : ""}>
+              <Link to="/" onClick={closeMobileMenu}>
+                Portada
+              </Link>
+            </li>
+            <li className={location.pathname === "/bitacora" ? "active" : ""}>
+              <Link to="/bitacora" onClick={closeMobileMenu}>
+                Bitácora
+              </Link>
+            </li>
+            <li className={location.pathname === "/json-data" ? "active" : ""}>
+              <Link to="/json-data" onClick={closeMobileMenu}>
+                Datos JSON
+              </Link>
+            </li>
+            <li className={location.pathname === "/api-data" ? "active" : ""}>
+              <Link to="/api-data" onClick={closeMobileMenu}>
+                API Externa
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      
-      <nav className="sidebar-nav">
-        <ul>
-          <li className={location.pathname === '/' ? 'active' : ''}>
-            <Link to="/">Portada</Link>
-          </li>
-          <li className={location.pathname === '/bitacora' ? 'active' : ''}>
-            <Link to="/bitacora">Bitácora</Link>
-          </li>
-          {/* <li className={location.pathname.includes('/perfil') ? 'active' : ''}>
-            <Link to="/perfil/franco">👥 Integrantes</Link>
-          </li> */}
-          <li className={location.pathname === '/json-data' ? 'active' : ''}>
-            <Link to="/json-data">Datos JSON</Link>
-          </li>
-          <li className={location.pathname === '/api-data' ? 'active' : ''}>
-            <Link to="/api-data">API Externa</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
+      {/* Desktop Sidebar */}
+      <div className="sidebar">
+        <div className="sidebar-logo">
+          {/* <img src={logo} alt="Logo Grupo 8" /> */}
+          <h2>GRUPO 8</h2>
+        </div>
+
+        <nav className="sidebar-nav">
+          <ul className="list-container">
+            <li className={location.pathname === "/" ? "active" : "w-full"}>
+              <Link to="/">Portada</Link>
+            </li>
+            <li
+              className={
+                location.pathname === "/bitacora" ? "active" : "w-full"
+              }
+            >
+              <Link to="/bitacora">Bitácora</Link>
+            </li>
+            <li
+              className={
+                location.pathname === "/json-data" ? "active" : "w-full"
+              }
+            >
+              <Link to="/json-data">Datos JSON</Link>
+            </li>
+            <li
+              className={
+                location.pathname === "/api-data" ? "active" : "w-full"
+              }
+            >
+              <Link to="/api-data">API Externa</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 };
 
