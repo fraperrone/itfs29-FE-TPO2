@@ -1,7 +1,7 @@
 // src/components/Data/JsonData.jsx
-import React from 'react';
-import Card from './Card';
-import datos from './datos.json';
+import React from "react";
+import Card from "./Card";
+import datos from "./datos.json";
 
 const JsonData = () => {
   return (

@@ -3,7 +3,7 @@
   --primary-accent: #ff00e5;
   --secondary-accent: #00f6ff;
   --text-main: #c0c1c9;
-  --text-secondary: #2d1f50; 
+  --text-secondary: #2d1f50;
 }
 
 .footerContainer {
@@ -11,7 +11,7 @@
   color: var(--text-main);
   padding: 25px 40px;
   border-top: 2px solid var(--primary-accent); /* Un borde neón para separar del resto del contenido */
-  font-family: 'Consolas', 'Menlo', 'monospace'; /* Fuente monoespaciada para un look más tech */
+  font-family: "Consolas", "Menlo", "monospace"; /* Fuente monoespaciada para un look más tech */
   text-align: center;
   position: relative;
   bottom: 0;
@@ -44,7 +44,9 @@
 }
 
 .footerLinks a:hover {
-  color: var(--primary-accent); /* Al pasar el mouse, cambian a Magenta Eléctrico */
+  color: var(
+    --primary-accent
+  ); /* Al pasar el mouse, cambian a Magenta Eléctrico */
   text-shadow: 0 0 8px var(--primary-accent); /* Efecto de brillo neón */
   transform: scale(1.1); /* Un pequeño zoom para más dinamismo */
 }
@@ -54,17 +56,9 @@
   .footerContent {
     flex-direction: row;
     font-size: small;
-
-    
   }
 
-  .footerContainer{
+  .footerContainer {
     height: 158px;
   }
-}
-
-@media (max-width: 543px) {
-    .footerContainer{
-        display: none;
-    }
 }
