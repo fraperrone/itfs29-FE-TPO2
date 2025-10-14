@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 // import logo from '../../assets/logo.png';
 
+import Logo from "../logo/Logo";
+
 const Sidebar = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,6 +20,8 @@ const Sidebar = () => {
 
   return (
     <>
+    
+        
       {/* Background Blur Overlay */}
       {isMobileMenuOpen && (
         <div className="mobile-menu-overlay" onClick={closeMobileMenu} />
@@ -26,7 +30,8 @@ const Sidebar = () => {
       {/* Mobile Navbar */}
       <div className="mobile-navbar">
         <div className="mobile-nav-header">
-          <h2 className="mobile-logo">GRUPO 8</h2>
+          {/* ingresamos el logo */}
+          <h2 className="mobile-logo"><Logo size={110}></Logo></h2>
           <button
             className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
             onClick={toggleMobileMenu}
@@ -69,7 +74,7 @@ const Sidebar = () => {
       <div className="sidebar">
         <div className="sidebar-logo">
           {/* <img src={logo} alt="Logo Grupo 8" /> */}
-          <h2>GRUPO 8</h2>
+          <Logo size={160}></Logo>
         </div>
 
         <nav className="sidebar-nav">
