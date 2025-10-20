@@ -1,5 +1,6 @@
 // src/pages/BitacoraPage.jsx
 import React from "react";
+import "../styles/main.css";
 
 const BitacoraPage = () => {
   return (
@@ -8,14 +9,14 @@ const BitacoraPage = () => {
         <h1 className="title">Bitácora del Proyecto</h1>
 
         <div className="info">
-          <p>
+          <p className="mb-4">
             En esta sección se documenta el proceso de desarrollo del proyecto,
             incluyendo decisiones de diseño, dificultades encontradas y cambios
             importantes realizados.
           </p>
 
           <h2>Decisiones de diseño</h2>
-          <ul>
+          <ul className="mb-4">
             <li>
               Se eligió una paleta de colores con gradientes oscuros y acentos
               neón para un estilo futurista
@@ -33,7 +34,7 @@ const BitacoraPage = () => {
           </ul>
 
           <h2>Dificultades encontradas y soluciones</h2>
-          <ul>
+          <ul className="mb-4">
             <li>
               Problemas con la migración de HTML estático a React: se resolvió
               mediante componentización
@@ -48,7 +49,7 @@ const BitacoraPage = () => {
           </ul>
 
           <h2>Cambios importantes durante la implementación</h2>
-          <ul>
+          <ul className="mb-4">
             <li>
               Se reorganizó la estructura de carpetas para el paradigma de
               componentes
@@ -61,7 +62,7 @@ const BitacoraPage = () => {
           </ul>
 
           <h2>Reflexiones y evolución</h2>
-          <p>
+          <p className="mb-4">
             La migración a React permitió una mejor organización del código,
             mayor reutilización de componentes y una experiencia de usuario más
             fluida como SPA. El uso de hooks y estados facilitó la gestión de

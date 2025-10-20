@@ -13,8 +13,7 @@ const ProfileCard = ({ integrante }) => {
         style={{
           backgroundImage: `url(${integrante.avatar})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
+          width: "50%",
           height: "auto",
         }}
       />

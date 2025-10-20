@@ -28,6 +28,8 @@
 .sidebar-logo {
   text-align: center;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar-logo img {
