@@ -35,7 +35,11 @@
 .title {
   font-weight: bold;
   color: #421e84;
-  font-size: 24px;
+  font-size: 32px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
 }
 
 .particle {

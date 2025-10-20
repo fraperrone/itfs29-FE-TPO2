@@ -20,8 +20,6 @@ const Sidebar = () => {
 
   return (
     <>
-    
-        
       {/* Background Blur Overlay */}
       {isMobileMenuOpen && (
         <div className="mobile-menu-overlay" onClick={closeMobileMenu} />
@@ -31,7 +29,9 @@ const Sidebar = () => {
       <div className="mobile-navbar">
         <div className="mobile-nav-header">
           {/* ingresamos el logo */}
-          <h2 className="mobile-logo"><Logo size={110}></Logo></h2>
+          <h2 className="mobile-logo">
+            <Logo size={110}></Logo>
+          </h2>
           <button
             className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
             onClick={toggleMobileMenu}
